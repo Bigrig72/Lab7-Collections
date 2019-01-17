@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace collections.Classes
+﻿namespace collections.Classes
 {
     public class Card
     {

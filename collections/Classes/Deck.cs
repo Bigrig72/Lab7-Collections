@@ -9,16 +9,7 @@ namespace collections.Classes
     {
         T[] DeckOfCards = new T[52];
         int currentIndex = 0;
-
-        public void Add(T item)
-        {
-            if (currentIndex > DeckOfCards.Length - 1)
-            {
-                Array.Resize(ref DeckOfCards, DeckOfCards.Length + 1);
-            }
-            DeckOfCards[currentIndex] = item;
-            currentIndex++;
-        }
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
         public IEnumerator<T> GetEnumerator()
         {
@@ -28,10 +19,23 @@ namespace collections.Classes
             };
         }
 
-        IEnumerator IEnumerable.GetEnumerator()
+        public void Add(T item)
         {
-            return GetEnumerator();
+            if (currentIndex > DeckOfCards.Length - 1)
+            {
+                Array.Resize(ref DeckOfCards, DeckOfCards.Length + 1);
+            }
+
+            DeckOfCards[currentIndex] = item;
+            currentIndex++;
         }
+
+        //public void Delete(T item)
+        //{      
+        //  Array.Resize(ref DeckOfCards, DeckOfCards.Length - 1);
+       
+        //  currentIndex--;        
+        //}
     }
 }
-    
+
