@@ -36,7 +36,7 @@ namespace collections
             Deck.Add(card10);
             Deck.Add(card11);
             Deck.Add(card12);
-            Deck.Delete(card1);
+           // Deck.Delete(card1);
 
             foreach (Card item in Deck)
             {
@@ -67,24 +67,24 @@ namespace collections
                 }
             }
 
-            Console.WriteLine("enter a number starting with 1 to give card back");
-            int deleteCard = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("We are going to delete a six of diamonds");
 
-            int counter2 = 0;
+
+            Card removeCard = Deck.Delete(card6);
+            if(removeCard != null)
+            {
+                Console.WriteLine($"{removeCard.Value} of {removeCard.Suit}");
+
+            }
+
+            Console.WriteLine($"The number of cards in the deck are: {Deck.currentIndex}");
+
+            Console.WriteLine("These are the remaining cards");
 
             foreach (Card item in Deck)
             {
-                counter2++;
-
-                if (counter2 < 6 && deleteCard == counter2)
-                {
-                   
-                    Deck.Delete(card1);
-                    Console.WriteLine($" Deleted: {item.Value} of {item.Suit}");
-                    
-                }
-
                 Console.WriteLine($"{item.Value} of {item.Suit}");
+
             }
         }
 
