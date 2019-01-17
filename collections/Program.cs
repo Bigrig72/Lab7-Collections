@@ -36,6 +36,7 @@ namespace collections
             Deck.Add(card10);
             Deck.Add(card11);
             Deck.Add(card12);
+            Deck.Delete(card1);
 
             foreach (Card item in Deck)
             {
@@ -64,15 +65,36 @@ namespace collections
                 {
                     Console.WriteLine($"Dealer cards are: {item.Value} of {item.Suit}");
                 }
-
             }
-            //Deck.Delete(card1);
 
-            //foreach (Card item in Deck)
-            //{
-            //    Console.WriteLine($"{item.Value} of {item.Suit}");
-            //}
+            Console.WriteLine("enter a number starting with 1 to give card back");
+            int deleteCard = Convert.ToInt32(Console.ReadLine());
+
+            int counter2 = 0;
+
+            foreach (Card item in Deck)
+            {
+                counter2++;
+
+                if (counter2 < 6 && deleteCard == counter2)
+                {
+                   
+                    Deck.Delete(card1);
+                    Console.WriteLine($" Deleted: {item.Value} of {item.Suit}");
+                    
+                }
+
+                Console.WriteLine($"{item.Value} of {item.Suit}");
+            }
         }
+
+        //Deck.Delete(card1);
+
+        //foreach (Card item in Deck)
+        //{
+        //    Console.WriteLine($"{item.Value} of {item.Suit}");
+        //}
+
 
         //public static bool PlayerOneCards()
         //{

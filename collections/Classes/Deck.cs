@@ -30,12 +30,12 @@ namespace collections.Classes
             currentIndex++;
         }
 
-        //public void Delete(T item)
-        //{      
-        //  Array.Resize(ref DeckOfCards, DeckOfCards.Length - 1);
-       
-        //  currentIndex--;        
-        //}
+        public void Delete(T item)
+        {
+            Array.Resize(ref DeckOfCards, DeckOfCards.Length - 1);
+
+            currentIndex--;
+        }
     }
 }
 
