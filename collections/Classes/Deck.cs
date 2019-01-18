@@ -30,7 +30,6 @@ namespace collections.Classes
             currentIndex++;
         }
 
-
         public T Delete(T item)
         {
             T removed = default(T);

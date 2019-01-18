@@ -71,6 +71,7 @@ namespace collections
 
 
             Card removeCard = Deck.Delete(card6);
+
             if(removeCard != null)
             {
                 Console.WriteLine($"{removeCard.Value} of {removeCard.Suit}");
