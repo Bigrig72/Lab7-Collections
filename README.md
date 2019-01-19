@@ -2,7 +2,7 @@
 ## Deck of cards 
 This collection builds a deck of 12 cards. It demonstrates the use of collections through IEnumerables and enums to show and output the information from my classes to the console.
 
-## what it looks like in action (Visuals)
+## What it looks like in action (Visuals)
 ![Dealer Cards](https://github.com/Bigrig72/Lab7-Collections/blob/master/assetts/Capture.PNG)
 ![Dealth Cards](https://github.com/Bigrig72/Lab7-Collections/blob/master/assetts/dealtCards.PNG)
 ![Removing card](https://github.com/Bigrig72/Lab7-Collections/blob/master/assetts/delete.PNG)
