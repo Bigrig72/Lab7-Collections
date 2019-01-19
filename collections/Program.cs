@@ -5,10 +5,12 @@ namespace collections
 {
     public class Program
     {
+        public static object Deck { get; set; }
+
         static void Main(string[] args)
         {
             Console.WriteLine("==============Dealers Deck Of Cards============");
-
+            // Creating a new deck with 12 cards
             Deck<Card> Deck = new Deck<Card>();
             Card card1 = new Card(Rank.Ace, Suit.Clubs);
             Card card2 = new Card(Rank.Two, Suit.Hearts);
@@ -36,7 +38,6 @@ namespace collections
             Deck.Add(card10);
             Deck.Add(card11);
             Deck.Add(card12);
-           // Deck.Delete(card1);
 
             foreach (Card item in Deck)
             {
@@ -45,7 +46,7 @@ namespace collections
 
             Console.WriteLine("==============Dealt Cards============");
 
-            int counter = 0;
+            int counter = 0; // setting different conditions to return certain cards to player 1, 2 and the dealer
 
             foreach (Card item in Deck)
             {
@@ -89,22 +90,7 @@ namespace collections
             }
         }
 
-        //Deck.Delete(card1);
-
-        //foreach (Card item in Deck)
-        //{
-        //    Console.WriteLine($"{item.Value} of {item.Suit}");
-        //}
-
-
-        //public static bool PlayerOneCards()
-        //{
-        //    for (int i = 0; i < Deck.Le; i++)
-        //    {
-
-        //    }
-        //}
-
+     
 
 
         //public Card DealCard()
